@@ -1,0 +1,12 @@
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\bin\Debug\net6.0\CalculationServiceLib.deps.json
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\bin\Debug\net6.0\CalculationServiceLib.dll
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\bin\Debug\net6.0\CalculationServiceLib.pdb
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\obj\Debug\net6.0\CalculationServiceLib.csproj.AssemblyReference.cache
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\obj\Debug\net6.0\CalculationServiceLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\obj\Debug\net6.0\CalculationServiceLib.AssemblyInfoInputs.cache
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\obj\Debug\net6.0\CalculationServiceLib.AssemblyInfo.cs
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\obj\Debug\net6.0\CalculationServiceLib.csproj.CoreCompileInputs.cache
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\obj\Debug\net6.0\CalculationServiceLib.dll
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\obj\Debug\net6.0\refint\CalculationServiceLib.dll
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\obj\Debug\net6.0\CalculationServiceLib.pdb
+D:\Documents\internship\solbeg\Calculator\CalculationServiceLib\obj\Debug\net6.0\ref\CalculationServiceLib.dll

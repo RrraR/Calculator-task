@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h6>This calculator utilizes expression trees. To use just enter the expression as you would write it.</h6>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        @Html.TextBox("StrInput")
+        <input name="textinp" type="submit" id="textinp" value="Calculate"/>
+    }
+    
+    @ViewData["strOutput"]
+</div>
