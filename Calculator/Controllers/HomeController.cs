@@ -40,7 +40,7 @@ public class HomeController : Controller
             var service = new CalculationServiceLib.CalculatorService();
             expression = expression.Replace(" ", "");
             result = service.CalculateExpression(expression);
-            result = double.TryParse(result, out var res) ? res.ToString() : "Error occured";
+            result = double.TryParse(result, out var res) ? Math.Round(res, 6).ToString() : "Error occured";
         }
         catch
         {

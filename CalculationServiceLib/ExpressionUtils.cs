@@ -6,21 +6,47 @@ public static class ExpressionUtils
     {
         var result = new string[1];
         var j = -1;
-        for (var i = 0; i < expression.Length; i++)
+        var i = 0;
+        while (i < expression.Length)
         {
-            if (!char.IsNumber(expression[i]))
+
+            if (!double.TryParse(expression[i].ToString(), out _))
             {
                 j++;
                 Array.Resize(ref result, j + 1);
                 result[j] = expression[i].ToString();
+                i++;
             }
             else
             {
-                if (i == 0 || !char.IsNumber(expression[i - 1]))
+                if (i == 0 || !double.TryParse(expression[i - 1].ToString(), out _))
                 {
                     j++;
                     Array.Resize(ref result, j + 1);
-                    result[j] += expression[i];
+                    if (i == expression.Length - 1 || expression[i + 1] != '.')
+                    {
+                        result[j] += expression[i].ToString();
+                        i++;
+                    }
+                    else if (expression[i + 1] == '.')
+                    {
+                        var k = i;
+                        var temp = "";
+                        while (expression[k] != '+' && expression[k] != '-' && expression[k] != '*' &&
+                               expression[k] != '/' && expression[k] != '(' && expression[k] != ')' &&
+                               expression[k] != '=')
+                        {
+                            temp += expression[k];
+                            k++;
+                            if (k == expression.Length)
+                            {
+                                break;
+                            }
+                        }
+
+                        i = k;
+                        result[j] += temp;
+                    }
                 }
                 else
                 {
@@ -32,15 +58,14 @@ public static class ExpressionUtils
         return result;
     }
 
-    public static List<string> CreateRPN(string[] tokens)
+    public static List<string> CreateRpn(string[] tokens)
     {
         var result = new List<string>();
         var stack = new List<string>();
         var priority = new List<int>();
         for (var i = 0; i < tokens.Count(); i++)
         {
-            double tempIntVar;
-            if (Double.TryParse(tokens[i], out tempIntVar))
+            if (Double.TryParse(tokens[i], out _))
             {
                 result.Add(tokens[i]);
             }

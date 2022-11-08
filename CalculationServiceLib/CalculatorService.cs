@@ -4,17 +4,16 @@ namespace CalculationServiceLib;
 
 public class CalculatorService
 {
-    
     public string CalculateExpression(string expression)
     {
         string[] tokens = ExpressionUtils.ParseExpression(expression);
-        List<string> rpn = ExpressionUtils.CreateRPN(tokens);
+        List<string> rpn = ExpressionUtils.CreateRpn(tokens);
         Expression<Func<double>> lambda = Expression.Lambda<Func<double>>(GetExpressionTree(rpn));
         Func<double> myDelegate = lambda.Compile();
         double result = myDelegate();
         return result.ToString();
     }
-    
+
     private Expression GetExpressionTree(List<string> rpn)
     {
         ExpressionHandler expressionHandler = new ExpressionHandler();
