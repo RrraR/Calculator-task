@@ -28,7 +28,7 @@ public static class ExpressionUtils
                         result[j] += expression[i].ToString();
                         i++;
                     }
-                    else if (expression[i + 1] == '.' || char.IsNumber(expression[i + 1]))
+                    else if (expression[i + 1] == '.' || char.IsNumber(expression[i + 1]) || char.IsNumber(expression[i]))
                     {
                         var k = i;
                         var temp = "";
